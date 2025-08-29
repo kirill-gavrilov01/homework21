@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-abstract class productBasket {
+ class ProductBasket {
     private List<Product> products = new ArrayList<>();
 
     // Метод добавляет продукт в корзину
-    void addProduct(Product product) {
+   public void addProduct(Product product) {
         products.add(product);
     }
 
@@ -36,16 +36,3 @@ abstract class productBasket {
         products.clear();
     }
 }
-class Product {
-    private String name;
-
-    public Product(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-
-

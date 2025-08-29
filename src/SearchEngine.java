@@ -7,7 +7,7 @@ class SearchEngine {
 
     // Метод поиска всех соответствий (возвращает весь список подходящих результатов)
     public List<Searchable> findAllMatches(List<? extends Searchable> items, String query) {
-        results.clear(); // очищаем предыдущий результат
+        List<Searchable> results = new ArrayList<>();  // очищаем предыдущий результат
         for (Searchable item : items) {
             if (item.contains(query)) {
                 results.add(item); // добавляем все подходящие элементы
@@ -17,7 +17,7 @@ class SearchEngine {
     }
 }
 
-abstract class Searchable {
+    abstract class Searchable {
     abstract boolean contains(String query);
     abstract String getTitle();
 }
